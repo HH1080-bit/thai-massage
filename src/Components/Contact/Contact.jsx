@@ -41,7 +41,7 @@ const Contact = () => {
 
 
     try {
-      await axios.post("https://harmonythaiyoga.ca/send-email", { name, mail });
+      await axios.post("harmonythaiyoga.ca/send-email", { name, mail });
       console.log("Email sent successfully!");
       setIsSubmitted(true);
     } catch (error) {

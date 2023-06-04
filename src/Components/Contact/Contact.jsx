@@ -39,15 +39,25 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    e.preventDefault();
 
-    try {
-      await axios.post("harmonythaiyoga.ca/send-email", { name, mail });
-      console.log("Email sent successfully!");
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error("Error  email:", error);
-      setIsError(true);
-    }
+    const data = {
+      to: 'blackablue12@gmail.com',
+      from: 'j7089366@gmail.com',
+      subject: 'Test Email',
+      body: 'This is a test email sent using SmtpJS.com',
+      SecureToken: 'dfe00927-9fb1-490e-9c1d-79d07ad5f09e', // Replace with your SmtpJS.com secure token
+    };
+    axios.post('https://smtpjs.com/v3/smtpjs.com', data)
+    .then((response) => {
+      console.log('Email sent successfully:', response);
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error);
+    });
+  
+    setName("");
+    setMail("");
     setName("");
     setMail("");
   };

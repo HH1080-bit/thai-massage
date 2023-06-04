@@ -13,7 +13,7 @@ sgMail.setApiKey(
   "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"
 );
 // Endpoint for handling the send-email POST request
-app.post("https://harmonythaiyoga.ca/send-email", async (req, res) => {
+app.post("/send-email", async (req, res) => {
   const { name, mail } = req.body;
   console.log(mail);
 

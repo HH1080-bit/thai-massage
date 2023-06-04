@@ -39,8 +39,6 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    e.preventDefault();
-
     const data = {
       to: 'blackablue12@gmail.com',
       from: 'j7089366@gmail.com',

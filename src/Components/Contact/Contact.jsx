@@ -48,7 +48,7 @@ const Contact = () => {
       body: 'This is a test email sent using SmtpJS.com',
       SecureToken: 'dfe00927-9fb1-490e-9c1d-79d07ad5f09e', // Replace with your SmtpJS.com secure token
     };
-    axios.post('https://smtpjs.com/v3/smtpjs.com', data)
+    axios.post('https://smtpjs.com/v3/smtp.js', data)
     .then((response) => {
       console.log('Email sent successfully:', response);
     })
